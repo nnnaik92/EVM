@@ -6,6 +6,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		int input ; 
+		String ButtonName ; // ex tiger
+		
+	
 		Scanner s = new Scanner(System.in);
 		Evm_controller e = new Evm_controller() ; 
 		
@@ -19,14 +22,32 @@ public class Main {
 		e.store_cand(all);
 		
 		
-		e.Display();
+		while(true){
 		
 		System.out.println("Press button");
 		System.out.println("1:ballot");
-		
+		System.out.println("2:result");
+	
 		input  = s.nextInt() ; 
-		e.check(input) ;
+	    e.check(input) ;
+		if( input == 1 ){
+			e.Display();
+			
+	       ButtonName	= s.next() ;		
+			e.votefor(ButtonName);	
+			
+		}
+		else if ( input == 2 ){
+			e.result();
+			
+		}
+		else{
+			
+			System.out.println("Evm teminated");
+			return ;
+		}
 		
+		}
 
 	}
 

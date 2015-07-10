@@ -2,10 +2,17 @@ package evm;
 
 public class votingState extends State {
 
-	@Override
 	public void switchState(Ballot_Unit context) {
-		// TODO Auto-generated method stub
+		Non_votingState o = new Non_votingState();
+		context.setState(o);
+		System.out.println("State is " + o.getStateName());
 
 	}
+	
+	public votingState()
+	{
+		stateName = "On";
+	}
 
+	
 }

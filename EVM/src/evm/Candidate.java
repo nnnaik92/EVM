@@ -3,13 +3,13 @@ package evm;
 public class Candidate {
 	private String  symbol ; 
 	private String  Name ;
-	
+	private  int count  ; 
 	
 	
 	
 	
 	public Candidate(String symbol, String name) {
-		
+		this.count = 0 ; 
 		this.symbol = symbol;
 		this.Name = name;
 	}
@@ -34,6 +34,17 @@ public class Candidate {
 	}
 	
 	
+	
+	public void vote(){
+		count++;
+		
+	}
+
+
+	public int getcount() {
+		// TODO Auto-generated method stub
+		return count;
+	}
 	
 	
 

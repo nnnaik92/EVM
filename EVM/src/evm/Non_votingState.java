@@ -12,7 +12,7 @@ public class Non_votingState extends State {
 	
 	public Non_votingState()
 	{
-		stateName = "On";
+		stateName = "off";
 	}
 
 	

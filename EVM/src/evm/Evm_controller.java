@@ -14,6 +14,7 @@ public class Evm_controller {
 				if(input == 1  ){
 					b.switchState();
 					b.display_pannel() ;
+					
 				}
 			}
 
@@ -28,11 +29,34 @@ public class Evm_controller {
 			public void Display(){
 				 
 				for (Candidate element : allCand.getAll()) {
-				    System.out.println("Candidate: " + element.getName());
+				    System.out.println("Candidate: " + element.getName() + "\nsymbol =>" +element.getSymbol()  );
 				}
 				
 			}
 			
+			public void result(){
+				for (Candidate element : allCand.getAll()) {
+				    System.out.println("Candidate: " + element.getName() + "\n total votes =>" +element.getcount()  );
+				}
+				
+			}
+			
+			public void votefor(String buttonName){
+				    System.out.println(buttonName);
+					b.voting(buttonName);
+					b.addresult(allCand);
+					b.switchState();
+				   
+				}
+				
+				
+				
+				
+				
+				
+			
+			
+
 	         
 
 }
